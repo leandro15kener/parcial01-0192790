@@ -1,7 +1,3 @@
-//Un centro de distribución registró la cantidad de paquetes procesados 
-// durante 10 horas consecutivas. Los valores son enteros y deben 
-// almacenarse en un arreglo unidimensional
-
 import java.util.Scanner;
 
 public class Ejercicio1 {
@@ -13,7 +9,7 @@ public class Ejercicio1 {
 
         for (int i = 0; i < paquetes.length; i++) {
             do {
-                System.out.print("Ingrese la cantidad de paquetes procesador por hora:  " + (i + 1) + ": ");
+                System.out.print("Ingrese la cantidad de paquetes procesador en la hora " + (i + 1) + ": ");
                 paquetes[i] = lector.nextInt();
 
                 if (paquetes[i] < 0) {
@@ -23,6 +19,8 @@ public class Ejercicio1 {
 
             total += paquetes[i];
         }
+
+    
 
         double promedio =  total / paquetes.length;
 
@@ -38,26 +36,41 @@ public class Ejercicio1 {
         }
         int horasBajoPromedio = 0;
 
-        int produccionActual = 0;
-        int produccionMaxima = 0;
+        int rachaActual = 0;
+        int rachaMaxima = 0;
 
         for (int i = 0; i < paquetes.length; i++) {
             if (paquetes[i] < promedio) {
                 horasBajoPromedio++;
-                produccionActual++;
+                rachaActual++;
 
-                if (produccionActual > produccionMaxima) {
-                    produccionMaxima = produccionActual;
+                if (rachaActual > rachaMaxima) {
+                    rachaMaxima = rachaActual;
                 }
             } else {
-                produccionActual = 0;
+                rachaActual = 0;
             }
         }
 
-        
+        System.out.println("RESULTADOS: ");
 
+        System.out.println("Total de paquetes procesados: " + total);
+        System.out.println("Promedio de paquetes por hora: " + promedio);
+        System.out.println("Hora con menor producción: " + horaMenor);
+        System.out.println("Cantidad mínima procesada: " + menorPaquetes);
+        System.out.println("Horas por debajo del promedio: " + horasBajoPromedio);
+        System.out.println("Racha más larga por debajo del promedio: "+ rachaMaxima + " horas");
 
+        System.out.println("LISTADO POR HORA: ");
+
+        for (int i = 0; i < paquetes.length; i++) {
+            System.out.println("Hora " + (i + 1) + ": " + paquetes[i] + " paquetes");
+        }
+
+        lector.close();
 
         
     }
 }
+
+//profe, no pude hallar el error
