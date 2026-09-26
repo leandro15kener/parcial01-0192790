@@ -108,3 +108,23 @@ Construya un programa que:
 Entregue los dos archivos `.java`, debidamente nombrados y capaces de compilar y ejecutarse sin errores.
 
 **Analice primero y programe después. Java ejecuta exactamente lo escrito, incluso cuando la idea iba por otro camino.**
+
+ESPECIFICACIONES DEL PARCIAL:
+
+En el primer codigo(paquetes procesados por hora) no tuve que hacerle cambios ya que estaba terminado. Revise que tuviera la lectura de datos, los calculos y la muestra de resultados. Me faltaba era ejecutarlo para comprobar que funcionara, porque la terminal no lo procesaba.
+
+
+Ya para el segundo codigo(registro de ventas sucursales) primero importe Scanner, que es lo que use para poder leer los datos que escribo por teclado. Despues, cree el lector y una matriz llamada unidadesVendidas de 4 filas y 5 columnas. En esa matriz guarde las unidades vendidas por cada sucursal y producto: cada fila representa una sucursal y cada columna, un producto.
+
+Tambien cree dos arreglos: totalUnidadesSucursal para guardar el total vendido por cada sucursal y totalVendidosProducto para guardar el total de cada producto. Ademas, use cantidadMayoresA30 para contar cuantos datos de la matriz son mayores que 30.
+
+Para pedir los datos, utilice dos ciclos for. El primero recorre las sucursales y el segundo recorre los productos de cada sucursal. En cada posicion de la matriz use un ciclo do while para leer las unidades y comprobar que no fueran negativas. Si escribo un numero negativo, el programa muestra un mensaje de error y me vuelve a pedir el dato.
+
+Cuando el dato es valido, lo sumo al total de la sucursal y al total del producto. Tambien reviso si es mayor que 30; si lo es, aumento en uno el contador cantidadMayoresA30.
+
+Despues busque la sucursal que vendio menos. Para eso guarde primero la posicion 0 como la menor y la compare con las demas. Hice algo parecido para encontrar el producto con mas unidades, empezando por la posicion 0. Al mostrar esos resultados sume uno a las posiciones, porque los arreglos empiezan en cero, pero las sucursales y los productos se numeran desde uno.
+
+Al final mostre la matriz, los totales de cada sucursal, los totales de cada producto, cual fue la sucursal con menos ventas, cual fue el producto mas vendido y cuantos registros fueron mayores que 30. Para terminar, cerre el lector con lector.close().
+
+
+

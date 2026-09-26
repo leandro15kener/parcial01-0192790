@@ -68,9 +68,8 @@ public class Ejercicio1 {
         }
 
         lector.close();
+        
 
         
     }
 }
-
-//profe, no pude hallar el error
